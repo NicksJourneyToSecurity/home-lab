@@ -20,7 +20,7 @@ The lab network can reach the internet for updates but can't be reached from my 
 | Phase | Goal | Status |
 | --- | --- | --- |
 | [1 – Foundation](phase-01-foundation/) | VirtualBox, isolated lab network, hardened Ubuntu Server, snapshot | ✅ Complete |
-| 2 – Monitoring | Wazuh SIEM collecting logs and raising alerts | Planned |
+| 2 – Monitoring | Wazuh SIEM collecting logs and raising alerts | Planned | "Phase 2 – Monitoring: In progress"
 | 3 – Windows | Windows endpoint joined to monitoring | Planned |
 | 4 – Attack & detect | Attack the lab from Kali, investigate alerts, write incident reports | Planned |
 
