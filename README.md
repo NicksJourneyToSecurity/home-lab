@@ -7,20 +7,20 @@ A self-built cyber security lab where I build, attack and defend my own small ne
 ```text
 Windows 11 host (VirtualBox 7.2)
 └── LabNet: NAT Network, 10.10.10.0/24
-    └── lab-ubuntu-01   Ubuntu Server 26.04.1 LTS   (phase 1)
-    └── Wazuh server    monitoring / SIEM           (phase 2, planned)
-    └── Windows VM      "company" endpoint           (phase 3, planned)
-    └── Kali Linux      attacker                     (phase 4, planned)
+    └── lab-ubuntu-01   10.10.10.3    Ubuntu Server 26.04.1 LTS        (phase 1)
+    └── lab-wazuh-01    10.10.10.10   Ubuntu Server 24.04.5 + Wazuh    (phase 2)
+    └── Windows VM      "company" endpoint                              (phase 3, planned)
+    └── Kali Linux      attacker                                        (phase 4, planned)
 ```
 
-The lab network can reach the internet for updates but can't be reached from my home network. Before attack work in phase 4, the lab moves to a fully isolated Internal Network.
+The lab network can reach the internet for updates but can't be reached from my home network. The Wazuh dashboard is reachable from my PC only, through a port forward on `127.0.0.1`. Before attack work in phase 4, the lab moves to a fully isolated Internal Network.
 
 ## Phases
 
 | Phase | Goal | Status |
 | --- | --- | --- |
 | [1 – Foundation](phase-01-foundation/) | VirtualBox, isolated lab network, hardened Ubuntu Server, snapshot | ✅ Complete |
-| 2 – Monitoring | Wazuh SIEM collecting logs and raising alerts | Planned | "Phase 2 – Monitoring: In progress"
+| [2 – Monitoring](phase-02-monitoring/) | Wazuh SIEM collecting logs and raising alerts | In progress |
 | 3 – Windows | Windows endpoint joined to monitoring | Planned |
 | 4 – Attack & detect | Attack the lab from Kali, investigate alerts, write incident reports | Planned |
 
